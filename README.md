@@ -28,6 +28,22 @@ Typical costs for running this Minecraft server with default settings, at the ti
 ## deploy.sh
 Execute with `./deploy.sh`.
 
+The script will verify all dependencies are present, and check that a suitable wallet exists; if more than one wallet is present on the system, it will prompt you to select the one you want to use.  It does not attempt to verify that you have enough funds, so please make sure you have sufficient funding for the escrow process (see above), as well as gas fees for blockchain transactions and the deployment fees themselves..
+
+The script downloads the latest list of nodes, and automatically selects the best one based on its ping time relative to you.
+
+The script sends the deployment request to the blockchain, and gives you a `dseq` number - you can use this to manage the deployment manually without the script, or to close it down later.
+
+The script automatically chooses the best bidder for the deployment - it waits a pre-defined amount of time, collects bids, and chooses the lowest bidder.  If there is more than one bidder at the lowest price, it selects randomly between them.
+
+The script then reports the address of the provider it's chosen, and sends the manifest.  Once the manifest has been accepted, you get a report of the lease status.
+
+The script then gives you a URL you can connect to with your Minecraft client, and share with your friends.  Bear in mind it can take a minute or two for the server to spin up, once the lease has been created, so be patient if you can't connect immediately.
+
+The script also generates `akash` commands for you to run if you want to get the Minecraft server logs, or the Kubernetes logs for the container.
+
+The result of all transactions is verified by query commands after, so even if a transaction response gets lost due to a timeout or RPC error, the script (and the deployment) will continue and succeed.
+
 ## close.sh
 Execute with `./close.sh`.
 
