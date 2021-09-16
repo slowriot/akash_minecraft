@@ -11,10 +11,11 @@ services:
           - global: true
     env:
       - FORCE_REDOWNLOAD=true
-      - MEMORY=4G
       - EULA=TRUE
       - VERSION=LATEST
       - SERVER_NAME=AkashMinecraft
+      - MEMORY=4G
+      - MAX_PLAYERS=10
 
 profiles:
   compute:
