@@ -66,15 +66,16 @@ The simplest way to configure your Minecraft server is through environment varia
 
 The default variables are minimal:
 - FORCE_REDOWNLOAD=true
-- MEMORY=4G
 - EULA=TRUE
 - VERSION=latest
 - SERVER_NAME=AkashMinecraft
+- MEMORY=4G
+- MAX_PLAYERS=10
 
 ### Common configuration adjustments
 If you wish to run a different version of the game, simply state the version in the `VERSION=...` variable.  This can be set to `LATEST`, `SNAPSHOT`, or a numerical version such as `1.7.10`.
 
-Difficulty can be adjusted with settings like `DIFFICULTY=hard`.
+Difficulty can be adjusted with settings like `DIFFICULTY=hard`, `HARDCORE=true`.  Server name is self-explanatory.  Op and whitelist players can be listed with `OPS=user1,user2` and `WHITELIST=user1,user2`.  The default maximum number of players is 20, if no value is specified in environment variables, and the default for this configuration is 10 to match the performance settings below - feel free to experiment with this.  A full list of variabels can be found in the container's documentation at https://github.com/slowriot/docker-minecraft-server#server-configuration.
 
 ### Mods
 You can run a modded server by specifying `TYPE=FORGE`, `TYPE=BUKKIT`, `TYPE=SPIGOT`, `TYPE=PAPER`, etc.  Mod packs can be added in different ways depending on the framework - for example, for Spigot use `SPIGET_RESOURCES=9089,34315` where the numbers are resource IDs, and for Forge, Bukkit etc you can use `MODPACK=http://www.example.com/mods/modpack.zip`.  For detailed instructions on managing mods, see the link to the Minecraft server container documentation at the end of this page.
