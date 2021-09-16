@@ -82,12 +82,14 @@ Difficulty can be adjusted with settings like `DIFFICULTY=hard`, `HARDCORE=true`
 ### Mods
 You can run a modded server by specifying `TYPE=FORGE`, `TYPE=BUKKIT`, `TYPE=SPIGOT`, `TYPE=PAPER`, etc.  Mod packs can be added in different ways depending on the framework - for example, for Spigot use `SPIGET_RESOURCES=9089,34315` where the numbers are resource IDs, and for Forge, Bukkit etc you can use `MODPACK=http://www.example.com/mods/modpack.zip`.  For detailed instructions on managing mods, see the link to the Minecraft server container documentation at the end of this page.
 
-### Adjusting container performance
+### Adjusting server and container performance
 Configuring the performance of the server can also be done by editing `deploy.yaml` prior to deploying.  The default settings attempt to offer good performance while offering the cheapest costs, and should be adequate for up to 10 players.  It is easy to adjust these settings for your particular needs.
 
 If you want to adjust your memory usage - either to increase it in order to accomodate more players, or to reduce it in order to reduce deployment cost - you need to alter it in two places.  By default, `MEMORY=4G` instructs the Minecraft server itself to use a maximum of 4GB of RAM, and `memory: size: 5Gi` specifies the maximum memory for the container it runs in.  The memory for the container should always be larger than the memory configured for the game, but you can experiment with how big a gap you need between the two.
 
 Default CPU usage is configured as 1.5 - that's one-and-a-half cores, which seems to work well for vanilla Minecraft, which at the time of writing is still largely single-threaded.  If you find server performance could be better (for example if you are using a lot of redstone, or have a lot of mobs on the server), you may want to raise this - and the cost of the deployment may rise slightly as a result.
+
+If you are an advanced user and would like to adjust JVM options directly, this is also possible with environment variables - see the [JVM options](https://github.com/slowriot/docker-minecraft-server#jvm-options) documentation for more details.
 
 # Minecraft configuration
 For more detailed information on configuring the Minecraft docker image, including how to enable mod support, see the docker container's documentation at https://github.com/slowriot/docker-minecraft-server#readme.  Wherever an environment variable is given with `-e VARIABLE=VALUE`, just insert `VARIABLE=...` under the `env` section of `deploy.yaml`.
