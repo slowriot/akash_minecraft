@@ -13,7 +13,7 @@ services:
       - FORCE_REDOWNLOAD=true
       - MEMORY=4G
       - EULA=TRUE
-      - VERSION=latest
+      - VERSION=LATEST
 
 profiles:
   compute:
