@@ -4,6 +4,8 @@ This repository contains scripts and configurations to launch a Minecraft server
 
 The included scripts should run anywhere Bash is available and the below dependencies are met.  Users can also use the deploy.yaml file directly with other Akash deployment clients as they become available, or [deploy manually](https://docs.akash.network/guides/deployment) following the user guide.
 
+A default vanilla configuration is provided - just clone this repository, and you can launch a Minecraft server on the blockchain immediately with just the `./deploy.sh` command.
+
 # Dependencies
 - [akash CLI](https://docs.akash.network/guides/deploy#part-1-install-akash)
 - curl: `apt install curl`
