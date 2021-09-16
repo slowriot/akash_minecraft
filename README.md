@@ -20,7 +20,7 @@ If you haven't ordered any Akash deployments before, you will also need to [crea
 # Payment
 Deployments are paid for with the AKT token.  You can buy the token on [various exchanges](https://akash.network/token).
 
-At the time of writing, you must have a minimum of 5AKT in your wallet - this is [held in escrow](https://docs.akash.network/glossary/escrow] for the duration of the deployment, and will be returned to you, minus the hosting costs you accrue.
+At the time of writing, you must have a minimum of 5AKT in your wallet - this is [held in escrow](https://docs.akash.network/glossary/escrow) for the duration of the deployment, and will be returned to you, minus the hosting costs you accrue.
 
 Typical costs for running this Minecraft server with default settings, at the time of writing, are 8uAKT per block (uAKT = 1/1,000,000th of an AKT).
 
