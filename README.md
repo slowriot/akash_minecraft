@@ -69,9 +69,15 @@ The default variables are minimal:
 - MEMORY=4G
 - EULA=TRUE
 - VERSION=latest
+- SERVER_NAME=AkashMinecraft
 
 ### Common configuration adjustments
-If you wish to run a different version of the game, simply state the version in the `VERSION=...` variable.
+If you wish to run a different version of the game, simply state the version in the `VERSION=...` variable.  This can be set to `LATEST`, `SNAPSHOT`, or a numerical version such as `1.7.10`.
+
+Difficulty can be adjusted with settings like `DIFFICULTY=hard`.
+
+### Mods
+You can run a modded server by specifying `TYPE=FORGE`, `TYPE=BUKKIT`, `TYPE=SPIGOT`, `TYPE=PAPER`, etc.  Mod packs can be added in different ways depending on the framework - for example, for Spigot use `SPIGET_RESOURCES=9089,34315` where the numbers are resource IDs, and for Forge, Bukkit etc you can use `MODPACK=http://www.example.com/mods/modpack.zip`.  For detailed instructions on managing mods, see the link to the Minecraft server container documentation at the end of this page.
 
 ### Adjusting container performance
 Configuring the performance of the server can also be done by editing `deploy.yaml` prior to deploying.  The default settings attempt to offer good performance while offering the cheapest costs, and should be adequate for up to 10 players.  It is easy to adjust these settings for your particular needs.
