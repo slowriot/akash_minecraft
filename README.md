@@ -6,8 +6,6 @@ The included scripts should run anywhere Bash is available and the below depende
 
 A default vanilla configuration is provided - just clone this repository, and you can launch a Minecraft server on the blockchain immediately with just the `./deploy.sh` command.
 
-![](https://raw.githubusercontent.com/slowriot/akash_minecraft/master/docs/deploy_anim.gif)
-
 # Dependencies
 - [akash CLI](https://docs.akash.network/guides/deploy#part-1-install-akash)
 - curl: `apt install curl`
@@ -27,6 +25,8 @@ At the time of writing, you must have a minimum of 5AKT in your wallet - this is
 Typical costs for running this Minecraft server with default settings, at the time of writing, are 8uAKT per block (uAKT = 1/1,000,000th of an AKT).
 
 # Scripts
+![](https://raw.githubusercontent.com/slowriot/akash_minecraft/master/docs/deploy_anim.gif)
+
 ## deploy.sh
 Execute with `./deploy.sh`.
 
