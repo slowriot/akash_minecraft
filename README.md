@@ -1,5 +1,7 @@
 This repository contains scripts and configurations to launch a Minecraft server on the Akash blockchain.  It can be easily configured with only changes to deploy.yaml, and supports any Minecraft version, including multiple modded server types.
 
+The intention behind this project is to make it easy to deploy a Minecraft server on Akash with a single command.  Scripts are included which automatically request a deployment, select and accept the cheapest bid, and provide a link to the running server and port.  Reasonable defaults are configured for a vanilla server, but mod support is easy to activate with simple change of environment variables.  All configuration takes place in one file at runtime - there's no need to build your own docker image, and making a change and redeploying it only takes a few seconds.
+
 [Akash](https://akash.network/) is a blockchain-based distributed cloud computing platform that aims to cut the cost of on-demand cloud computing.  This repository was created for a hackathon to showcase Akash's capabilities in a practical way.
 
 The included scripts should run anywhere Bash is available and the below dependencies are met.  Users can also use the deploy.yaml file directly with other Akash deployment clients as they become available, or [deploy manually](https://docs.akash.network/guides/deployment) following the user guide.
