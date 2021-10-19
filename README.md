@@ -32,7 +32,7 @@ Typical costs for running this Minecraft server with default settings, at the ti
 ## deploy.sh
 Execute with `./deploy.sh`.
 
-The script will verify all dependencies are present, and check that a suitable wallet exists; if more than one wallet is present on the system, it will prompt you to select the one you want to use.  It does not attempt to verify that you have enough funds, so please make sure you have sufficient funding for the escrow process (see above), as well as gas fees for blockchain transactions and the deployment fees themselves..
+The script will verify all dependencies are present, and check that a suitable wallet exists; if more than one wallet is present on the system, it will prompt you to select the one you want to use.  It does not attempt to verify that you have enough funds, so please make sure you have sufficient funding for the escrow process (see above), as well as gas fees for blockchain transactions and the deployment fees themselves.
 
 The script downloads the latest list of nodes, and automatically selects the best one based on its ping time relative to you.
 
